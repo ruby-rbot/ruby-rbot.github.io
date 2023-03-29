@@ -1,0 +1,860 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Irc::Bot::MessageMapper
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!Irc/Bot/MessageMapper.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (M)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Irc.html" title="Irc (module)">Irc</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Bot.html" title="Irc::Bot (class)">Bot</a></span></span>
+     &raquo; 
+    <span class="title">MessageMapper</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: Irc::Bot::MessageMapper
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Irc::Bot::MessageMapper</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">/home/apoc/projects/ruby/rbot/lib/rbot/messagemapper.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>MessageMapper is a class designed to reduce the amount of regexps and
+string parsing plugins and bot modules need to do, in order to process and
+respond to messages.</p>
+
+<p>You add templates to the MessageMapper which are examined by the handle
+method when handling a message. The templates tell the mapper which method
+in its parent class (your class) to invoke for that message. The string is
+split, optionally defaulted and validated before being passed to the
+matched method.</p>
+
+<p>A template such as “foo :option :otheroption” will match the string “foo
+bar baz” and, by default, result in method <code>foo</code> being called,
+if present, in the parent class. It will receive two parameters, the
+message (derived from BasicUserMessage) and a Hash containing</p>
+
+<pre class="code ruby"><code class="ruby"><span class='lbrace'>{</span><span class='symbol'>:option</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>bar</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:otheroption</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>baz</span><span class='tstring_end'>&quot;</span></span><span class='rbrace'>}</span>
+</code></pre>
+
+<p>See the #map method for more details.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="MessageMapper/Failure.html" title="Irc::Bot::MessageMapper::Failure (class)">Failure</a></span>, <span class='object_link'><a href="MessageMapper/FriendlyFailure.html" title="Irc::Bot::MessageMapper::FriendlyFailure (class)">FriendlyFailure</a></span>, <span class='object_link'><a href="MessageMapper/NoActionFailure.html" title="Irc::Bot::MessageMapper::NoActionFailure (class)">NoActionFailure</a></span>, <span class='object_link'><a href="MessageMapper/NoMatchFailure.html" title="Irc::Bot::MessageMapper::NoMatchFailure (class)">NoMatchFailure</a></span>, <span class='object_link'><a href="MessageMapper/NotPrivateFailure.html" title="Irc::Bot::MessageMapper::NotPrivateFailure (class)">NotPrivateFailure</a></span>, <span class='object_link'><a href="MessageMapper/NotPublicFailure.html" title="Irc::Bot::MessageMapper::NotPublicFailure (class)">NotPublicFailure</a></span>, <span class='object_link'><a href="MessageMapper/PartialMatchFailure.html" title="Irc::Bot::MessageMapper::PartialMatchFailure (class)">PartialMatchFailure</a></span>
+    
+  
+</p>
+
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fallback%3D-instance_method" title="#fallback= (instance method)">- (Object) <strong>fallback</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+      <span class="note title writeonly">writeonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>used to set the method name used as a fallback for unmatched messages.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#each-instance_method" title="#each (instance method)">- (Object) <strong>each</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Iterate over each MessageTemplate handled.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#handle-instance_method" title="#handle (instance method)">- (Object) <strong>handle</strong>(m) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><dl class="rdoc-list note-list"><dt><em>m</em>
+<dd>
+<p>derived from BasicUserMessage.</p>
+</dd></dl>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (MessageMapper) <strong>initialize</strong>(parent) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><dl class="rdoc-list note-list"><dt><em>parent</em>
+<dd>
+<p>parent class which will receive mapped messages.</p>
+</dd></dl>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#last-instance_method" title="#last (instance method)">- (Object) <strong>last</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Return the last added MessageTemplate.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#map-instance_method" title="#map (instance method)">- (Object) <strong>map</strong>(botmodule, *args) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>call-seq: map(botmodule, template, options).</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Irc::Bot::MessageMapper (class)">MessageMapper</a></span></tt>) <strong>initialize</strong>(parent) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <dl class="rdoc-list note-list"><dt><em>parent</em>
+<dd>
+<p>parent class which will receive mapped messages</p>
+</dd></dl>
+
+<p>Create a new MessageMapper with parent class <em>parent</em>. This class
+will receive messages from the mapper via the handle() method.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+114
+115
+116
+117
+118</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/messagemapper.rb', line 114</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_parent'>parent</span><span class='rparen'>)</span>
+  <span class='ivar'>@parent</span> <span class='op'>=</span> <span class='id identifier rubyid_parent'>parent</span>
+  <span class='ivar'>@templates</span> <span class='op'>=</span> <span class='const'>Array</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@fallback</span> <span class='op'>=</span> <span class='symbol'>:usage</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="fallback=-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>fallback=</strong>(value)  <span class="extras">(writeonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>used to set the method name used as a fallback for unmatched messages. The
+default fallback is a method called “usage”.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+108
+109
+110</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/messagemapper.rb', line 108</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_fallback='>fallback=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='ivar'>@fallback</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="each-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>each</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Iterate over each MessageTemplate handled.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+227
+228
+229</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/messagemapper.rb', line 227</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_each'>each</span>
+  <span class='ivar'>@templates</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_tmpl'>tmpl</span><span class='op'>|</span> <span class='kw'>yield</span> <span class='id identifier rubyid_tmpl'>tmpl</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="handle-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>handle</strong>(m) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <dl class="rdoc-list note-list"><dt><em>m</em>
+<dd>
+<p>derived from BasicUserMessage</p>
+</dd></dl>
+
+<p>Examine the message <em>m</em>, comparing it with each map()&#39;d template
+to find and process a match. Templates are examined in the order they were
+map()&#39;d - first match wins.</p>
+
+<p>Returns <code>true</code> if a match is found including fallbacks,
+<code>false</code> otherwise.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/messagemapper.rb', line 244</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_handle'>handle</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>if</span> <span class='ivar'>@templates</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+  <span class='id identifier rubyid_failures'>failures</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@templates</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_tmpl'>tmpl</span><span class='op'>|</span>
+    <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='id identifier rubyid_tmpl'>tmpl</span><span class='period'>.</span><span class='id identifier rubyid_recognize'>recognize</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_kind_of?'>kind_of?</span> <span class='const'>Failure</span>
+      <span class='id identifier rubyid_failures'>failures</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_params'>params</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_action'>action</span> <span class='op'>=</span> <span class='id identifier rubyid_tmpl'>tmpl</span><span class='period'>.</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:action</span><span class='rbracket'>]</span>
+      <span class='kw'>unless</span> <span class='ivar'>@parent</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_failures'>failures</span> <span class='op'>&lt;&lt;</span> <span class='const'>NoActionFailure</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_tmpl'>tmpl</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span>
+        <span class='kw'>next</span>
+      <span class='kw'>end</span>
+      <span class='id identifier rubyid_auth'>auth</span> <span class='op'>=</span> <span class='id identifier rubyid_tmpl'>tmpl</span><span class='period'>.</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:full_auth_path</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>checking auth for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_auth'>auth</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+      <span class='kw'>if</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_bot'>bot</span><span class='period'>.</span><span class='id identifier rubyid_auth'>auth</span><span class='period'>.</span><span class='id identifier rubyid_allow?'>allow?</span><span class='lparen'>(</span><span class='id identifier rubyid_auth'>auth</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_source'>source</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_replyto'>replyto</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>template match found and auth&#39;d: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_action'>action</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_params'>params</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_in_thread'>in_thread</span> <span class='kw'>and</span> <span class='lparen'>(</span><span class='id identifier rubyid_tmpl'>tmpl</span><span class='period'>.</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:thread</span><span class='rbracket'>]</span> <span class='kw'>or</span> <span class='id identifier rubyid_tmpl'>tmpl</span><span class='period'>.</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:threaded</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>and</span>
+            <span class='lparen'>(</span><span class='kw'>defined?</span> <span class='const'>WebServiceUser</span> <span class='kw'>and</span> <span class='kw'>not</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_source'>source</span><span class='period'>.</span><span class='id identifier rubyid_instance_of?'>instance_of?</span> <span class='const'>WebServiceUser</span><span class='rparen'>)</span>
+          <span class='comment'># Web service: requests are handled threaded anyway and we want to 
+</span>          <span class='comment'># wait for the responses.
+</span>
+          <span class='comment'># since the message action is in a separate thread, the message may be
+</span>          <span class='comment'># delegated to unreplied() before the thread has a chance to actually
+</span>          <span class='comment'># mark it as replied. since threading is used mostly for commands that
+</span>          <span class='comment'># are known to take some processing time (e.g. download a web page) before
+</span>          <span class='comment'># giving an output, we just mark these as &#39;replied&#39; here
+</span>          <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_replied'>replied</span> <span class='op'>=</span> <span class='kw'>true</span>
+          <span class='const'>Thread</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>do</span>
+            <span class='kw'>begin</span>
+              <span class='ivar'>@parent</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+            <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+              <span class='id identifier rubyid_error'>error</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>In threaded action: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+              <span class='id identifier rubyid_debug'>debug</span> <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_backtrace'>backtrace</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+            <span class='kw'>end</span>
+          <span class='kw'>end</span>
+        <span class='kw'>else</span>
+          <span class='ivar'>@parent</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_action'>action</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+
+        <span class='kw'>return</span> <span class='kw'>true</span>
+      <span class='kw'>end</span>
+      <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>auth failed for </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_auth'>auth</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+      <span class='comment'># if it&#39;s just an auth failure but otherwise the match is good,
+</span>      <span class='comment'># don&#39;t try any more handlers
+</span>      <span class='kw'>return</span> <span class='kw'>false</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_failures'>failures</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_r'>r</span><span class='op'>|</span>
+    <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_r'>r</span><span class='period'>.</span><span class='id identifier rubyid_template'>template</span><span class='period'>.</span><span class='id identifier rubyid_inspect'>inspect</span><span class='embexpr_end'>}</span><span class='tstring_content'> =&gt; </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_r'>r</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>no handler found, trying fallback</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>if</span> <span class='ivar'>@fallback</span> <span class='op'>&amp;&amp;</span> <span class='ivar'>@parent</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='ivar'>@fallback</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_bot'>bot</span><span class='period'>.</span><span class='id identifier rubyid_auth'>auth</span><span class='period'>.</span><span class='id identifier rubyid_allow?'>allow?</span><span class='lparen'>(</span><span class='ivar'>@fallback</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_source'>source</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_replyto'>replyto</span><span class='rparen'>)</span>
+      <span class='ivar'>@parent</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='ivar'>@fallback</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='symbol'>:failures</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_failures'>failures</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+      <span class='kw'>return</span> <span class='kw'>true</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='kw'>false</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="last-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>last</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Return the last added MessageTemplate</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+232
+233
+234</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/messagemapper.rb', line 232</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_last'>last</span>
+  <span class='ivar'>@templates</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="map-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>map</strong>(botmodule, *args) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>call-seq: map(botmodule, template, options)</p>
+<dl class="rdoc-list note-list"><dt><em>botmodule</em>
+<dd>
+<p>the BotModule which will handle this map</p>
+</dd><dt><em>template</em>
+<dd>
+<p>a String describing the messages to be matched</p>
+</dd><dt><em>options</em>
+<dd>
+<p>a Hash holding variouns options</p>
+</dd></dl>
+
+<p>This method is used to register a new MessageTemplate that will map any
+BasicUserMessage matching the given <em>template</em> to a corresponding
+action. A simple example:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_plugin'>plugin</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>myplugin :parameter</span><span class='tstring_end'>&#39;</span></span>
+</code></pre>
+
+<p>(other examples follow).</p>
+
+<p>By default, the action to which the messages are mapped is a method named
+like the first word of the template. The</p>
+
+<pre class="code ruby"><code class="ruby">:action =&gt; &#39;method_name&#39;</code></pre>
+
+<p>option can be used to override this default behaviour. Example:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_plugin'>plugin</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>myplugin :parameter</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='symbol'>:action</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>mymethod</span><span class='tstring_end'>&#39;</span></span>
+</code></pre>
+
+<p>By default whether a handler is fired depends on an auth check. In rbot
+versions up to 0.9.10, the first component of the string was used for the
+auth check, unless overridden via the :auth =&gt; &#39;auth_name&#39;
+option. Since version 0.9.11, a new auth method has been implemented. TODO
+document.</p>
+
+<p>Static parameters (not prefixed with &#39;:&#39; or &#39;*&#39;) must match
+the respective component of the message exactly. Example:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_plugin'>plugin</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>myplugin :foo is :bar</span><span class='tstring_end'>&#39;</span></span>
+</code></pre>
+
+<p>will only match messages of the form “myplugin something is somethingelse”</p>
+
+<p>Dynamic parameters can be specified by a colon &#39;:&#39; to match a
+single component (whitespace separated), or a * to suck up all following
+parameters into an array. Example:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_plugin'>plugin</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>myplugin :parameter1 *rest</span><span class='tstring_end'>&#39;</span></span>
+</code></pre>
+
+<p>You can provide defaults for dynamic components using the :defaults
+parameter. If a component has a default, then it is optional. e.g:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_plugin'>plugin</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>myplugin :foo :bar</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='symbol'>:defaults</span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='symbol'>:bar</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>qux</span><span class='tstring_end'>&#39;</span></span><span class='rbrace'>}</span>
+</code></pre>
+
+<p>would match &#39;myplugin param param2&#39; and also &#39;myplugin
+param&#39;. In the latter case, :bar would be provided from the default.</p>
+
+<p>Static and dynamic parameters can also be made optional by wrapping them in
+square brackets []. For example</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_plugin'>plugin</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>myplugin :foo [is] :bar</span><span class='tstring_end'>&#39;</span></span>
+</code></pre>
+
+<p>will match both &#39;myplugin something is somethingelse&#39; and
+&#39;myplugin something somethingelse&#39;.</p>
+
+<p>Components can be validated before being allowed to match, for example if
+you need a component to be a number:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_plugin'>plugin</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>myplugin :param</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='symbol'>:requirements</span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='symbol'>:param</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\d+$</span><span class='regexp_end'>/</span></span><span class='rbrace'>}</span>
+</code></pre>
+
+<p>will only match strings of the form &#39;myplugin 1234&#39; or some other
+number.</p>
+
+<p>Templates can be set not to match public or private messages using the
+:public or :private boolean options.</p>
+
+<p>Summary of recognized options:</p>
+<dl class="rdoc-list note-list"><dt>action
+<dd>
+<p>method to call when the template is matched</p>
+</dd><dt>auth_path
+<dd>
+<p>TODO document</p>
+</dd><dt>requirements
+<dd>
+<p>a Hash whose keys are names of dynamic parameters and whose values are
+regular expressions that the parameters must match</p>
+</dd><dt>defaults
+<dd>
+<p>a Hash whose keys are names of dynamic parameters and whose values are the
+values to be assigned to those parameters when they are missing from the
+message. Any dynamic parameter appearing in the :defaults Hash is therefore
+optional</p>
+</dd><dt>public
+<dd>
+<p>a boolean (defaults to true) that determines whether the template should
+match public (in channel) messages.</p>
+</dd><dt>private
+<dd>
+<p>a boolean (defaults to true) that determines whether the template should
+match private (not in channel) messages.</p>
+</dd><dt>threaded
+<dd>
+<p>a boolean (defaults to false) that determines whether the action should be
+called in a separate thread.</p>
+</dd></dl>
+
+<p>Further examples:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='comment'># match &#39;karmastats&#39; and call my stats() method
+</span><span class='id identifier rubyid_plugin'>plugin</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>karmastats</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='symbol'>:action</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>stats</span><span class='tstring_end'>&#39;</span></span>
+<span class='comment'># match &#39;karma&#39; with an optional &#39;key&#39; and call my karma() method
+</span><span class='id identifier rubyid_plugin'>plugin</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>karma :key</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='symbol'>:defaults</span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='symbol'>:key</span> <span class='op'>=&gt;</span> <span class='kw'>false</span><span class='rbrace'>}</span>
+<span class='comment'># match &#39;karma for something&#39; and call my karma() method
+</span><span class='id identifier rubyid_plugin'>plugin</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>karma for :key</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='comment'># two matches, one for public messages in a channel, one for
+</span><span class='comment'># private messages which therefore require a channel argument
+</span><span class='id identifier rubyid_plugin'>plugin</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>urls search :channel :limit :string</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+          <span class='symbol'>:action</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>search</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+          <span class='symbol'>:defaults</span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='symbol'>:limit</span> <span class='op'>=&gt;</span> <span class='int'>4</span><span class='rbrace'>}</span><span class='comma'>,</span>
+          <span class='symbol'>:requirements</span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='symbol'>:limit</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\d+$</span><span class='regexp_end'>/</span></span><span class='rbrace'>}</span><span class='comma'>,</span>
+          <span class='symbol'>:public</span> <span class='op'>=&gt;</span> <span class='kw'>false</span>
+<span class='id identifier rubyid_plugin'>plugin</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>urls search :limit :string</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+          <span class='symbol'>:action</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>search</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+          <span class='symbol'>:defaults</span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='symbol'>:limit</span> <span class='op'>=&gt;</span> <span class='int'>4</span><span class='rbrace'>}</span><span class='comma'>,</span>
+          <span class='symbol'>:requirements</span> <span class='op'>=&gt;</span> <span class='lbrace'>{</span><span class='symbol'>:limit</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^\d+$</span><span class='regexp_end'>/</span></span><span class='rbrace'>}</span><span class='comma'>,</span>
+          <span class='symbol'>:private</span> <span class='op'>=&gt;</span> <span class='kw'>false</span>
+</code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+222
+223
+224</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/messagemapper.rb', line 222</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='id identifier rubyid_botmodule'>botmodule</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='ivar'>@templates</span> <span class='op'>&lt;&lt;</span> <span class='const'>MessageTemplate</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_botmodule'>botmodule</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Mon Mar  9 04:49:04 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.2.0).
+</div>
+
+  </body>
+</html>

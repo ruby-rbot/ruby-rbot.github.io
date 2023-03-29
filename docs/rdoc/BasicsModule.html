@@ -1,0 +1,1444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: BasicsModule
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!BasicsModule.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (B)</a> &raquo;
+    
+    
+    <span class="title">BasicsModule</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: BasicsModule
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">CoreBotModule</span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">CoreBotModule</li>
+          
+            <li class="next">BasicsModule</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>– vim:sw=2:et ++</p>
+
+<p>:title: rbot basic management from IRC</p>
+<dl class="rdoc-list note-list"><dt>Author
+<dd>
+<p>Giuseppe “Oblomov” Bilotta &lt;giuseppe.bilotta@gmail.com&gt;</p>
+</dd></dl>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bot_action-instance_method" title="#bot_action (instance method)">- (Object) <strong>bot_action</strong>(m, param) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bot_channel_list-instance_method" title="#bot_channel_list (instance method)">- (Object) <strong>bot_channel_list</strong>(m, param) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bot_help-instance_method" title="#bot_help (instance method)">- (Object) <strong>bot_help</strong>(m, param) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bot_hide-instance_method" title="#bot_hide (instance method)">- (Object) <strong>bot_hide</strong>(m, param) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bot_join-instance_method" title="#bot_join (instance method)">- (Object) <strong>bot_join</strong>(m, param) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bot_mode-instance_method" title="#bot_mode (instance method)">- (Object) <strong>bot_mode</strong>(m, param) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bot_notify-instance_method" title="#bot_notify (instance method)">- (Object) <strong>bot_notify</strong>(m, param) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bot_part-instance_method" title="#bot_part (instance method)">- (Object) <strong>bot_part</strong>(m, param) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bot_ping-instance_method" title="#bot_ping (instance method)">- (Object) <strong>bot_ping</strong>(m, param) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bot_quiet-instance_method" title="#bot_quiet (instance method)">- (Object) <strong>bot_quiet</strong>(m, param) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bot_quit-instance_method" title="#bot_quit (instance method)">- (Object) <strong>bot_quit</strong>(m, param) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bot_reconnect-instance_method" title="#bot_reconnect (instance method)">- (Object) <strong>bot_reconnect</strong>(m, param) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bot_restart-instance_method" title="#bot_restart (instance method)">- (Object) <strong>bot_restart</strong>(m, param) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bot_say-instance_method" title="#bot_say (instance method)">- (Object) <strong>bot_say</strong>(m, param) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#bot_talk-instance_method" title="#bot_talk (instance method)">- (Object) <strong>bot_talk</strong>(m, param) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#connect-instance_method" title="#connect (instance method)">- (Object) <strong>connect</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>on connect, we join the default channels unless we have to wait for
+identification.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#ctcp_listen-instance_method" title="#ctcp_listen (instance method)">- (Object) <strong>ctcp_listen</strong>(m) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#help-instance_method" title="#help (instance method)">- (Object) <strong>help</strong>(cmd, topic = &quot;&quot;) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>handle help requests for “core” topics.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#identified-instance_method" title="#identified (instance method)">- (Object) <strong>identified</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#invite-instance_method" title="#invite (instance method)">- (Object) <strong>invite</strong>(m) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#join_channels-instance_method" title="#join_channels (instance method)">- (Object) <strong>join_channels</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="bot_action-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>bot_action</strong>(m, param) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+110
+111
+112</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb', line 110</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bot_action'>bot_action</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_param'>param</span><span class='rparen'>)</span>
+  <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_action'>action</span> <span class='id identifier rubyid_param'>param</span><span class='lbracket'>[</span><span class='symbol'>:where</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_param'>param</span><span class='lbracket'>[</span><span class='symbol'>:what</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bot_channel_list-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>bot_channel_list</strong>(m, param) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb', line 72</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bot_channel_list'>bot_channel_list</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_param'>param</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_ret'>ret</span> <span class='op'>=</span> <span class='id identifier rubyid__'>_</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>I am in: </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='comment'># sort the channels by the base name and then map with prefixes for the
+</span>  <span class='comment'># mode and display.
+</span>  <span class='id identifier rubyid_ret'>ret</span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_channels'>channels</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='period'>.</span><span class='id identifier rubyid_sort'>sort</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='comma'>,</span><span class='id identifier rubyid_b'>b</span><span class='op'>|</span>
+      <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_b'>b</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span>
+  <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span>
+      <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_modes_of'>modes_of</span><span class='lparen'>(</span><span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_myself'>myself</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_mo'>mo</span><span class='op'>|</span>
+        <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_server'>server</span><span class='period'>.</span><span class='id identifier rubyid_prefix_for_mode'>prefix_for_mode</span><span class='lparen'>(</span><span class='id identifier rubyid_mo'>mo</span><span class='rparen'>)</span>
+      <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>+</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+  <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>, </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_reply'>reply</span> <span class='id identifier rubyid_ret'>ret</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bot_help-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>bot_help</strong>(m, param) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+144
+145
+146</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb', line 144</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bot_help'>bot_help</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_param'>param</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_reply'>reply</span> <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_help'>help</span><span class='lparen'>(</span><span class='id identifier rubyid_param'>param</span><span class='lbracket'>[</span><span class='symbol'>:topic</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bot_hide-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>bot_hide</strong>(m, param) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+98
+99
+100</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb', line 98</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bot_hide'>bot_hide</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_param'>param</span><span class='rparen'>)</span>
+  <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span> <span class='int'>0</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bot_join-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>bot_join</strong>(m, param) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52
+53
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb', line 50</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bot_join'>bot_join</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_param'>param</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_param'>param</span><span class='lbracket'>[</span><span class='symbol'>:pass</span><span class='rbracket'>]</span>
+    <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span> <span class='id identifier rubyid_param'>param</span><span class='lbracket'>[</span><span class='symbol'>:chan</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_param'>param</span><span class='lbracket'>[</span><span class='symbol'>:pass</span><span class='rbracket'>]</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span> <span class='id identifier rubyid_param'>param</span><span class='lbracket'>[</span><span class='symbol'>:chan</span><span class='rbracket'>]</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bot_mode-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>bot_mode</strong>(m, param) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+114
+115
+116</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb', line 114</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bot_mode'>bot_mode</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_param'>param</span><span class='rparen'>)</span>
+  <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_mode'>mode</span> <span class='id identifier rubyid_param'>param</span><span class='lbracket'>[</span><span class='symbol'>:where</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_param'>param</span><span class='lbracket'>[</span><span class='symbol'>:what</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_param'>param</span><span class='lbracket'>[</span><span class='symbol'>:who</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bot_notify-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>bot_notify</strong>(m, param) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+106
+107
+108</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb', line 106</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bot_notify'>bot_notify</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_param'>param</span><span class='rparen'>)</span>
+  <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_notice'>notice</span> <span class='id identifier rubyid_param'>param</span><span class='lbracket'>[</span><span class='symbol'>:where</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_param'>param</span><span class='lbracket'>[</span><span class='symbol'>:what</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bot_part-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>bot_part</strong>(m, param) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+64
+65
+66
+67
+68
+69
+70</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb', line 64</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bot_part'>bot_part</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_param'>param</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_param'>param</span><span class='lbracket'>[</span><span class='symbol'>:chan</span><span class='rbracket'>]</span>
+    <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_part'>part</span> <span class='id identifier rubyid_param'>param</span><span class='lbracket'>[</span><span class='symbol'>:chan</span><span class='rbracket'>]</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_part'>part</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_target'>target</span> <span class='kw'>if</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_public?'>public?</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bot_ping-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>bot_ping</strong>(m, param) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+118
+119
+120</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb', line 118</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bot_ping'>bot_ping</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_param'>param</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_reply'>reply</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>pong</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bot_quiet-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>bot_quiet</strong>(m, param) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb', line 122</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bot_quiet'>bot_quiet</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_param'>param</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_param'>param</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='symbol'>:where</span><span class='rparen'>)</span>
+    <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_set_quiet'>set_quiet</span> <span class='id identifier rubyid_param'>param</span><span class='lbracket'>[</span><span class='symbol'>:where</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^here$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_target'>target</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_set_quiet'>set_quiet</span>
+  <span class='kw'>end</span>
+  <span class='comment'># Make sense when the commmand is given in private or in a non-quieted
+</span>  <span class='comment'># channel
+</span>  <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_okay'>okay</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bot_quit-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>bot_quit</strong>(m, param) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+86
+87
+88</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb', line 86</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bot_quit'>bot_quit</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_param'>param</span><span class='rparen'>)</span>
+  <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_quit'>quit</span> <span class='id identifier rubyid_param'>param</span><span class='lbracket'>[</span><span class='symbol'>:msg</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bot_reconnect-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>bot_reconnect</strong>(m, param) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94
+95
+96</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb', line 94</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bot_reconnect'>bot_reconnect</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_param'>param</span><span class='rparen'>)</span>
+  <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_reconnect'>reconnect</span> <span class='id identifier rubyid_param'>param</span><span class='lbracket'>[</span><span class='symbol'>:msg</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bot_restart-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>bot_restart</strong>(m, param) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+90
+91
+92</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb', line 90</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bot_restart'>bot_restart</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_param'>param</span><span class='rparen'>)</span>
+  <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_restart'>restart</span> <span class='id identifier rubyid_param'>param</span><span class='lbracket'>[</span><span class='symbol'>:msg</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bot_say-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>bot_say</strong>(m, param) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+102
+103
+104</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb', line 102</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bot_say'>bot_say</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_param'>param</span><span class='rparen'>)</span>
+  <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_say'>say</span> <span class='id identifier rubyid_param'>param</span><span class='lbracket'>[</span><span class='symbol'>:where</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_param'>param</span><span class='lbracket'>[</span><span class='symbol'>:what</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="bot_talk-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>bot_talk</strong>(m, param) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb', line 133</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_bot_talk'>bot_talk</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_param'>param</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_param'>param</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='symbol'>:where</span><span class='rparen'>)</span>
+    <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_reset_quiet'>reset_quiet</span> <span class='id identifier rubyid_param'>param</span><span class='lbracket'>[</span><span class='symbol'>:where</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_sub'>sub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^here$</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_target'>target</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_reset_quiet'>reset_quiet</span>
+  <span class='kw'>end</span>
+  <span class='comment'># Make sense when the commmand is given in private or in a non-quieted
+</span>  <span class='comment'># channel
+</span>  <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_okay'>okay</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="connect-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>connect</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>on connect, we join the default channels unless we have to wait for
+identification. Observe that this means the bot may not connect any
+channels until the &#39;identified&#39; method gets delegated</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34
+35
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_connect'>connect</span>
+  <span class='kw'>if</span> <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>irc.join_after_identify</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_log'>log</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>waiting for identififcation before JOINing default channels</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_join_channels'>join_channels</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="ctcp_listen-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>ctcp_listen</strong>(m) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42
+43
+44
+45
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb', line 40</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_ctcp_listen'>ctcp_listen</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_who'>who</span> <span class='op'>=</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_private?'>private?</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>me</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_target'>target</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_ctcp'>ctcp</span><span class='period'>.</span><span class='id identifier rubyid_intern'>intern</span>
+  <span class='kw'>when</span> <span class='symbol'>:PING</span>
+    <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_ctcp_reply'>ctcp_reply</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span>
+  <span class='kw'>when</span> <span class='symbol'>:TIME</span>
+    <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_ctcp_reply'>ctcp_reply</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="help-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>help</strong>(cmd, topic = &quot;&quot;) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>handle help requests for “core” topics</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb', line 156</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_help'>help</span><span class='lparen'>(</span><span class='id identifier rubyid_cmd'>cmd</span><span class='comma'>,</span> <span class='id identifier rubyid_topic'>topic</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_cmd'>cmd</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>quit</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid__'>_</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>quit [&lt;message&gt;] =&gt; quit IRC with message &lt;message&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>restart</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid__'>_</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>restart =&gt; completely stop and restart the bot (including reconnect)</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>reconnect</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid__'>_</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>reconnect =&gt; ask the bot to disconnect and then connect again</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>join</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid__'>_</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>join &lt;channel&gt; [&lt;key&gt;] =&gt; join channel &lt;channel&gt; with secret key &lt;key&gt; if specified. </span><span class='embexpr_beg'>#{</span><span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_myself'>myself</span><span class='embexpr_end'>}</span><span class='tstring_content'> also responds to invites if you have the required access level</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>part</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid__'>_</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>part &lt;channel&gt; =&gt; part channel &lt;channel&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hide</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid__'>_</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>hide =&gt; part all channels</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>say</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid__'>_</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>say &lt;channel&gt;|&lt;nick&gt; &lt;message&gt; =&gt; say &lt;message&gt; to &lt;channel&gt; or in private message to &lt;nick&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>action</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid__'>_</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>action &lt;channel&gt;|&lt;nick&gt; &lt;message&gt; =&gt; does a /me &lt;message&gt; to &lt;channel&gt; or in private message to &lt;nick&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>quiet</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid__'>_</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>quiet [in here|&lt;channel&gt;] =&gt; with no arguments, stop speaking in all channels, if \&quot;in here\&quot;, stop speaking in this channel, or stop speaking in &lt;channel&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>talk</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid__'>_</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>talk [in here|&lt;channel&gt;] =&gt; with no arguments, resume speaking in all channels, if \&quot;in here\&quot;, resume speaking in this channel, or resume speaking in &lt;channel&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ping</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid__'>_</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ping =&gt; replies with a pong</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mode</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid__'>_</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>mode &lt;channel&gt; &lt;mode&gt; &lt;nicks&gt; =&gt; set channel modes for &lt;nicks&gt; on &lt;channel&gt; to &lt;mode&gt;</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='comment'>#     when &quot;botsnack&quot;
+</span>  <span class='comment'>#       return &quot;botsnack =&gt; reward #{@bot.myself} for being good&quot;
+</span>  <span class='comment'>#     when &quot;hello&quot;
+</span>  <span class='comment'>#       return &quot;hello|hi|hey|yo [#{@bot.myself}] =&gt; greet the bot&quot;
+</span>  <span class='kw'>else</span>
+    <span class='id identifier rubyid__'>_</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%{name}: quit, restart, join, part, hide, save, say, action, topic, quiet, talk, ping, mode</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>%</span> <span class='lbrace'>{</span><span class='symbol'>:name</span><span class='op'>=&gt;</span><span class='id identifier rubyid_name'>name</span><span class='rbrace'>}</span>
+    <span class='comment'>#, botsnack, hello
+</span>  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="identified-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>identified</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb', line 25</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_identified'>identified</span>
+  <span class='id identifier rubyid_join_channels'>join_channels</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="invite-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>invite</strong>(m) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+58
+59
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb', line 58</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_invite'>invite</span><span class='lparen'>(</span><span class='id identifier rubyid_m'>m</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_auth'>auth</span><span class='period'>.</span><span class='id identifier rubyid_allow?'>allow?</span><span class='lparen'>(</span><span class='symbol'>:basics::move::join</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_source'>source</span><span class='comma'>,</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_source'>source</span><span class='rparen'>)</span>
+    <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span> <span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_channel'>channel</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="join_channels-instance_method">
+  
+    - (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>join_channels</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/core/basics.rb', line 14</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_join_channels'>join_channels</span>
+  <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_config'>config</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>irc.join_channels</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span>
+    <span class='id identifier rubyid_debug'>debug</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>autojoining channel </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_c'>c</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_c'>c</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(\S+)\s+(\S+)$</span><span class='regexp_end'>/i</span></span><span class='rparen'>)</span>
+      <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span> <span class='backref'>$1</span><span class='comma'>,</span> <span class='backref'>$2</span>
+    <span class='kw'>else</span>
+      <span class='ivar'>@bot</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span> <span class='id identifier rubyid_c'>c</span> <span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_c'>c</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Mon Mar  9 04:49:06 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.2.0).
+</div>
+
+  </body>
+</html>

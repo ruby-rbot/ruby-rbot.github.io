@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: Regexp::Irc
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!Regexp/Irc.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (I)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Regexp.html" title="Regexp (class)">Regexp</a></span></span>
+     &raquo; 
+    <span class="title">Irc</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Module: Regexp::Irc
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">/home/apoc/projects/ruby/rbot/lib/rbot/irc.rb<span class="defines">,<br />
+  /home/apoc/projects/ruby/rbot/lib/rbot/core/utils/extends.rb</span>
+</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>We start with some IRC related regular expressions, used to match Irc::User
+nicks and users and Irc::Channel names</p>
+
+<p>For each of them we define two versions of the regular expression:</p>
+<ul><li>
+<p>a generic one, which should match for any server but may turn out to match
+more than a specific server would accept</p>
+</li><li>
+<p>an RFC-compliant matcher</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="CHAN_LIST-constant" class="">CHAN_LIST =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Match a list of channel anmes separated by optional commas, whitespace and
+optionally the word “and”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_new_list'>new_list</span><span class='lparen'>(</span><span class='const'>GEN_CHAN</span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="IN_CHAN-constant" class="">IN_CHAN =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Match “in #channel” or “on #channel” and/or “in private” (optionally
+shortened to “in pvt”), returning the channel name or the word
+&#39;private&#39; or &#39;pvt&#39; as capture</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>IN_ON</span><span class='embexpr_end'>}</span><span class='tstring_content'>\s+(</span><span class='embexpr_beg'>#{</span><span class='const'>GEN_CHAN</span><span class='embexpr_end'>}</span><span class='tstring_content'>)|(here)|</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="IN_CHAN_PVT-constant" class="">IN_CHAN_PVT =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>IN_CHAN</span><span class='embexpr_end'>}</span><span class='tstring_content'>|in\s+(private|pvt)</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="IN_CHAN_LIST_SFX-constant" class="">IN_CHAN_LIST_SFX =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>As above, but with channel lists</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_new_list'>new_list</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>GEN_CHAN</span><span class='embexpr_end'>}</span><span class='tstring_content'>|here</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='const'>IN_ON</span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="IN_CHAN_LIST-constant" class="">IN_CHAN_LIST =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>IN_ON</span><span class='embexpr_end'>}</span><span class='tstring_content'>\s+</span><span class='embexpr_beg'>#{</span><span class='const'>IN_CHAN_LIST_SFX</span><span class='embexpr_end'>}</span><span class='tstring_content'>|anywhere|everywhere</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="IN_CHAN_LIST_PVT_SFX-constant" class="">IN_CHAN_LIST_PVT_SFX =
+          
+        </dt>
+        <dd><pre class="code"><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_new_list'>new_list</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>GEN_CHAN</span><span class='embexpr_end'>}</span><span class='tstring_content'>|here|private|pvt</span><span class='regexp_end'>/</span></span><span class='comma'>,</span> <span class='const'>IN_ON</span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="IN_CHAN_LIST_PVT-constant" class="">IN_CHAN_LIST_PVT =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>IN_ON</span><span class='embexpr_end'>}</span><span class='tstring_content'>\s+</span><span class='embexpr_beg'>#{</span><span class='const'>IN_CHAN_LIST_PVT_SFX</span><span class='embexpr_end'>}</span><span class='tstring_content'>|anywhere|everywhere</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="NICK_LIST-constant" class="">NICK_LIST =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Match a list of nicknames separated by optional commas, whitespace and
+optionally the word “and”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='const'>Regexp</span><span class='period'>.</span><span class='id identifier rubyid_new_list'>new_list</span><span class='lparen'>(</span><span class='const'>GEN_NICK</span><span class='rparen'>)</span></pre></dd>
+      
+        <dt id="CHAN_FIRST-constant" class="">CHAN_FIRST =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Channel-name-matching regexps</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[#&amp;+]</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="CHAN_SAFE-constant" class="">CHAN_SAFE =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>![A-Z0-9]{5}</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="CHAN_ANY-constant" class="">CHAN_ANY =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[^\x00\x07\x0A\x0D ,:]</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="GEN_CHAN-constant" class="">GEN_CHAN =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(?:</span><span class='embexpr_beg'>#{</span><span class='const'>CHAN_FIRST</span><span class='embexpr_end'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='const'>CHAN_SAFE</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='embexpr_beg'>#{</span><span class='const'>CHAN_ANY</span><span class='embexpr_end'>}</span><span class='tstring_content'>+</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="RFC_CHAN-constant" class="">RFC_CHAN =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>CHAN_FIRST</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='const'>CHAN_ANY</span><span class='embexpr_end'>}</span><span class='tstring_content'>{1,49}|</span><span class='embexpr_beg'>#{</span><span class='const'>CHAN_SAFE</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='const'>CHAN_ANY</span><span class='embexpr_end'>}</span><span class='tstring_content'>{1,44}</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="SPECIAL_CHAR-constant" class="">SPECIAL_CHAR =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Nick-matching regexps</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[\x5b-\x60\x7b-\x7d]</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="NICK_FIRST-constant" class="">NICK_FIRST =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>SPECIAL_CHAR</span><span class='embexpr_end'>}</span><span class='tstring_content'>|[[:alpha:]]</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="NICK_ANY-constant" class="">NICK_ANY =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>SPECIAL_CHAR</span><span class='embexpr_end'>}</span><span class='tstring_content'>|[[:alnum:]]|-</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="GEN_NICK-constant" class="">GEN_NICK =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>NICK_FIRST</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='const'>NICK_ANY</span><span class='embexpr_end'>}</span><span class='tstring_content'>+</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="RFC_NICK-constant" class="">RFC_NICK =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>NICK_FIRST</span><span class='embexpr_end'>}</span><span class='embexpr_beg'>#{</span><span class='const'>NICK_ANY</span><span class='embexpr_end'>}</span><span class='tstring_content'>{0,8}</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="USER_CHAR-constant" class="">USER_CHAR =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[^\x00\x0a\x0d @]</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="GEN_USER-constant" class="">GEN_USER =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>USER_CHAR</span><span class='embexpr_end'>}</span><span class='tstring_content'>+</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="HOSTNAME_COMPONENT-constant" class="">HOSTNAME_COMPONENT =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Host-matching regexps</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>[[:alnum:]](?:[[:alnum:]]|-)*[[:alnum:]]*</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="HOSTNAME-constant" class="">HOSTNAME =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>HOSTNAME_COMPONENT</span><span class='embexpr_end'>}</span><span class='tstring_content'>(?:\.</span><span class='embexpr_beg'>#{</span><span class='const'>HOSTNAME_COMPONENT</span><span class='embexpr_end'>}</span><span class='tstring_content'>)*</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="HOSTADDR-constant" class="">HOSTADDR =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>IP_ADDR</span><span class='embexpr_end'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='const'>IP6_ADDR</span><span class='embexpr_end'>}</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="GEN_HOST-constant" class="">GEN_HOST =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>HOSTNAME</span><span class='embexpr_end'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='const'>HOSTADDR</span><span class='embexpr_end'>}</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="GEN_HOST_EXT-constant" class="">GEN_HOST_EXT =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Sadly, different networks have different, RFC-breaking ways of cloaking the
+actualy host address: see above for an example to handle FreeNode. Another
+example would be Azzurra, wich also inserts a “=” in the cloacked host. So
+let&#39;s just not care about this and go with the simplest thing:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\S+</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="GEN_USER_ID-constant" class="">GEN_USER_ID =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>User-matching Regexp</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(</span><span class='embexpr_beg'>#{</span><span class='const'>GEN_NICK</span><span class='embexpr_end'>}</span><span class='tstring_content'>)(?:(?:!(</span><span class='embexpr_beg'>#{</span><span class='const'>GEN_USER</span><span class='embexpr_end'>}</span><span class='tstring_content'>))?@(</span><span class='embexpr_beg'>#{</span><span class='const'>GEN_HOST_EXT</span><span class='embexpr_end'>}</span><span class='tstring_content'>))?</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="BANG_AT-constant" class="">BANG_AT =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Things such has the BIP proxy send invalid nicks in a complete netmask, so
+we want to match this, rather: this matches either a compliant nick or a a
+string with a very generic nick, a very generic hostname after an @ sign,
+and an optional user after a !</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>GEN_NICK</span><span class='embexpr_end'>}</span><span class='tstring_content'>|\S+?(?:!\S+?)?@\S+?</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+
+
+</div>
+
+    <div id="footer">
+  Generated on Mon Mar  9 04:49:01 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.2.0).
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,3148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: Irc
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!Irc.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (I)</a> &raquo;
+    
+    
+    <span class="title">Irc</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Module: Irc
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">/home/apoc/projects/ruby/rbot/lib/rbot/botuser.rb<span class="defines">,<br />
+  /home/apoc/projects/ruby/rbot/lib/rbot/rfc2812.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/registry/dbm.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/registry/tc.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/registry/daybreak.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/registry/sqlite.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/plugins.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/maskdb.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/botuser.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/messagemapper.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/core/webservice.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/core/utils/extends.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/core/utils/utils.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/core/utils/parse_time.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/core/utils/wordlist.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/core/utils/httputil.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/core/utils/filters.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/core/utils/agent.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/core/userdata.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/registry.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/message.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/language.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/irc.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/irc.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/irc.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/irc.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/irc.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/irc.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/ircbot.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/ircsocket.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/rbotconfig.rb,<br /> /home/apoc/projects/ruby/rbot/lib/rbot/config.rb</span>
+</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>The Irc module is used to keep all IRC-related classes in the same
+namespace</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Irc/ServerOrCasemap.html" title="Irc::ServerOrCasemap (module)">ServerOrCasemap</a></span>, <span class='object_link'><a href="Irc/Utils.html" title="Irc::Utils (module)">Utils</a></span>
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Irc/AsciiCasemap.html" title="Irc::AsciiCasemap (class)">AsciiCasemap</a></span>, <span class='object_link'><a href="Irc/BanlistMessage.html" title="Irc::BanlistMessage (class)">BanlistMessage</a></span>, <span class='object_link'><a href="Irc/BasicUserMessage.html" title="Irc::BasicUserMessage (class)">BasicUserMessage</a></span>, <span class='object_link'><a href="Irc/Bot.html" title="Irc::Bot (class)">Bot</a></span>, <span class='object_link'><a href="Irc/Casemap.html" title="Irc::Casemap (class)">Casemap</a></span>, <span class='object_link'><a href="Irc/Channel.html" title="Irc::Channel (class)">Channel</a></span>, <span class='object_link'><a href="Irc/ChannelList.html" title="Irc::ChannelList (class)">ChannelList</a></span>, <span class='object_link'><a href="Irc/Client.html" title="Irc::Client (class)">Client</a></span>, <span class='object_link'><a href="Irc/InviteMessage.html" title="Irc::InviteMessage (class)">InviteMessage</a></span>, <span class='object_link'><a href="Irc/JoinMessage.html" title="Irc::JoinMessage (class)">JoinMessage</a></span>, <span class='object_link'><a href="Irc/KickMessage.html" title="Irc::KickMessage (class)">KickMessage</a></span>, <span class='object_link'><a href="Irc/ListData.html" title="Irc::ListData (class)">ListData</a></span>, <span class='object_link'><a href="Irc/ListMessage.html" title="Irc::ListMessage (class)">ListMessage</a></span>, <span class='object_link'><a href="Irc/MessageQueue.html" title="Irc::MessageQueue (class)">MessageQueue</a></span>, <span class='object_link'><a href="Irc/ModeChangeMessage.html" title="Irc::ModeChangeMessage (class)">ModeChangeMessage</a></span>, <span class='object_link'><a href="Irc/MotdMessage.html" title="Irc::MotdMessage (class)">MotdMessage</a></span>, <span class='object_link'><a href="Irc/NamesMessage.html" title="Irc::NamesMessage (class)">NamesMessage</a></span>, <span class='object_link'><a href="Irc/Netmask.html" title="Irc::Netmask (class)">Netmask</a></span>, <span class='object_link'><a href="Irc/NetmaskDb.html" title="Irc::NetmaskDb (class)">NetmaskDb</a></span>, <span class='object_link'><a href="Irc/NetmaskList.html" title="Irc::NetmaskList (class)">NetmaskList</a></span>, <span class='object_link'><a href="Irc/NickMessage.html" title="Irc::NickMessage (class)">NickMessage</a></span>, <span class='object_link'><a href="Irc/NoSuchTargetMessage.html" title="Irc::NoSuchTargetMessage (class)">NoSuchTargetMessage</a></span>, <span class='object_link'><a href="Irc/NoticeMessage.html" title="Irc::NoticeMessage (class)">NoticeMessage</a></span>, <span class='object_link'><a href="Irc/PartMessage.html" title="Irc::PartMessage (class)">PartMessage</a></span>, <span class='object_link'><a href="Irc/PrivMessage.html" title="Irc::PrivMessage (class)">PrivMessage</a></span>, <span class='object_link'><a href="Irc/QueueRing.html" title="Irc::QueueRing (class)">QueueRing</a></span>, <span class='object_link'><a href="Irc/QuitMessage.html" title="Irc::QuitMessage (class)">QuitMessage</a></span>, <span class='object_link'><a href="Irc/RfcCasemap.html" title="Irc::RfcCasemap (class)">RfcCasemap</a></span>, <span class='object_link'><a href="Irc/Server.html" title="Irc::Server (class)">Server</a></span>, <span class='object_link'><a href="Irc/Socket.html" title="Irc::Socket (class)">Socket</a></span>, <span class='object_link'><a href="Irc/StrictRfcCasemap.html" title="Irc::StrictRfcCasemap (class)">StrictRfcCasemap</a></span>, <span class='object_link'><a href="Irc/TopicMessage.html" title="Irc::TopicMessage (class)">TopicMessage</a></span>, <span class='object_link'><a href="Irc/UnknownMessage.html" title="Irc::UnknownMessage (class)">UnknownMessage</a></span>, <span class='object_link'><a href="Irc/User.html" title="Irc::User (class)">User</a></span>, <span class='object_link'><a href="Irc/UserList.html" title="Irc::UserList (class)">UserList</a></span>, <span class='object_link'><a href="Irc/UserMessage.html" title="Irc::UserMessage (class)">UserMessage</a></span>, <span class='object_link'><a href="Irc/WelcomeMessage.html" title="Irc::WelcomeMessage (class)">WelcomeMessage</a></span>, <span class='object_link'><a href="Irc/WhoisMessage.html" title="Irc::WhoisMessage (class)">WhoisMessage</a></span>
+    
+  
+</p>
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="RPL_WELCOME-constant" class="">RPL_WELCOME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“Welcome to the Internet Relay Network
+&lt;nick&gt;!&lt;user&gt;@&lt;host&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>001</span></pre></dd>
+      
+        <dt id="RPL_YOURHOST-constant" class="">RPL_YOURHOST =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“Your host is &lt;servername&gt;, running version &lt;ver&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>002</span></pre></dd>
+      
+        <dt id="RPL_CREATED-constant" class="">RPL_CREATED =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“This server was created &lt;date&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>003</span></pre></dd>
+      
+        <dt id="RPL_MYINFO-constant" class="">RPL_MYINFO =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;servername&gt; &lt;version&gt; &lt;available user modes&gt;
+&lt;available channel modes&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>004</span></pre></dd>
+      
+        <dt id="RPL_ISUPPORT-constant" class="">RPL_ISUPPORT =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“005 nick PREFIX=(ov)@+ CHANTYPES=#&amp; :are supported by this server”</p>
+
+<p>defines the capabilities supported by the server.</p>
+
+<p>Previous RFCs defined message 005 as follows:</p>
+<ul><li>
+<p>Sent by the server to a user to suggest an alternative server.  This is
+often used when the connection is refused because the server is already
+full.</p>
+</li></ul>
+
+<p># “Try server &lt;server name&gt;, port &lt;port number&gt;”</p>
+
+<p>RPL_BOUNCE=005</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>005</span></pre></dd>
+      
+        <dt id="RPL_USERHOST-constant" class="">RPL_USERHOST =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:*1&lt;reply&gt; *( ” “ &lt;reply&gt; )”</p>
+<ul><li>
+<p>Reply format used by USERHOST to list replies to the query list.  The reply
+string is composed as follows:</p>
+</li></ul>
+
+<p>reply = nickname [ “*” ] “=” ( “+” / “-” ) hostname</p>
+
+<p>The &#39;*&#39; indicates whether the client has registered as an Operator.
+The &#39;-&#39; or &#39;+&#39; characters represent whether the client has
+set an AWAY message or not respectively.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>302</span></pre></dd>
+      
+        <dt id="RPL_ISON-constant" class="">RPL_ISON =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:*1&lt;nick&gt; *( ” “ &lt;nick&gt; )”</p>
+<ul><li>
+<p>Reply format used by ISON to list replies to the query list.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>303</span></pre></dd>
+      
+        <dt id="RPL_AWAY-constant" class="">RPL_AWAY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;nick&gt; :&lt;away message&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>301</span></pre></dd>
+      
+        <dt id="RPL_UNAWAY-constant" class="">RPL_UNAWAY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:You are no longer marked as being away”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>305</span></pre></dd>
+      
+        <dt id="RPL_NOWAWAY-constant" class="">RPL_NOWAWAY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:You have been marked as being away”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>306</span></pre></dd>
+      
+        <dt id="RPL_WHOISUSER-constant" class="">RPL_WHOISUSER =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;nick&gt; &lt;user&gt; &lt;host&gt; * :&lt;real name&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>311</span></pre></dd>
+      
+        <dt id="RPL_WHOISSERVER-constant" class="">RPL_WHOISSERVER =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;nick&gt; &lt;server&gt; :&lt;server info&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>312</span></pre></dd>
+      
+        <dt id="RPL_WHOISOPERATOR-constant" class="">RPL_WHOISOPERATOR =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;nick&gt; :is an IRC operator”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>313</span></pre></dd>
+      
+        <dt id="RPL_WHOISIDLE-constant" class="">RPL_WHOISIDLE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;nick&gt; &lt;integer&gt; :seconds idle”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>317</span></pre></dd>
+      
+        <dt id="RPL_ENDOFWHOIS-constant" class="">RPL_ENDOFWHOIS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;nick&gt; :End of WHOIS list”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>318</span></pre></dd>
+      
+        <dt id="RPL_WHOISCHANNELS-constant" class="">RPL_WHOISCHANNELS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;nick&gt; :*( ( ”@“ / ”+“ ) &lt;channel&gt; ” “ )”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>319</span></pre></dd>
+      
+        <dt id="RPL_WHOWASUSER-constant" class="">RPL_WHOWASUSER =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;nick&gt; &lt;user&gt; &lt;host&gt; * :&lt;real name&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>314</span></pre></dd>
+      
+        <dt id="RPL_ENDOFWHOWAS-constant" class="">RPL_ENDOFWHOWAS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;nick&gt; :End of WHOWAS”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>369</span></pre></dd>
+      
+        <dt id="RPL_LISTSTART-constant" class="">RPL_LISTSTART =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Obsolete. Not used.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>321</span></pre></dd>
+      
+        <dt id="RPL_LIST-constant" class="">RPL_LIST =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; &lt;# visible&gt; :&lt;topic&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>322</span></pre></dd>
+      
+        <dt id="RPL_LISTEND-constant" class="">RPL_LISTEND =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:End of LIST”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>323</span></pre></dd>
+      
+        <dt id="RPL_UNIQOPIS-constant" class="">RPL_UNIQOPIS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; &lt;nickname&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>325</span></pre></dd>
+      
+        <dt id="RPL_CHANNELMODEIS-constant" class="">RPL_CHANNELMODEIS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; &lt;mode&gt; &lt;mode params&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>324</span></pre></dd>
+      
+        <dt id="RPL_CREATIONTIME-constant" class="">RPL_CREATIONTIME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; &lt;unixtime&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>329</span></pre></dd>
+      
+        <dt id="RPL_CHANNEL_URL-constant" class="">RPL_CHANNEL_URL =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; &lt;url&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>328</span></pre></dd>
+      
+        <dt id="RPL_NOTOPIC-constant" class="">RPL_NOTOPIC =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; :No topic is set”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>331</span></pre></dd>
+      
+        <dt id="RPL_TOPIC-constant" class="">RPL_TOPIC =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; :&lt;topic&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>332</span></pre></dd>
+      
+        <dt id="RPL_TOPIC_INFO-constant" class="">RPL_TOPIC_INFO =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>&lt;channel&gt; &lt;set by&gt; &lt;unixtime&gt;</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>333</span></pre></dd>
+      
+        <dt id="RPL_INVITING-constant" class="">RPL_INVITING =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; &lt;nick&gt;”</p>
+<ul><li>
+<p>Returned by the server to indicate that the attempted INVITE message was
+successful and is being passed onto the end client.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>341</span></pre></dd>
+      
+        <dt id="RPL_SUMMONING-constant" class="">RPL_SUMMONING =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;user&gt; :Summoning user to IRC”</p>
+<ul><li>
+<p>Returned by a server answering a SUMMON message to indicate that it is
+summoning that user.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>342</span></pre></dd>
+      
+        <dt id="RPL_INVITELIST-constant" class="">RPL_INVITELIST =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; &lt;invitemask&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>346</span></pre></dd>
+      
+        <dt id="RPL_ENDOFINVITELIST-constant" class="">RPL_ENDOFINVITELIST =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; :End of channel invite list”</p>
+<ul><li>
+<p>When listing the &#39;invitations masks&#39; for a given channel, a server
+is required to send the list back using the RPL_INVITELIST and
+RPL_ENDOFINVITELIST messages.  A separate RPL_INVITELIST is sent for each
+active mask. After the masks have been listed (or if none present) a
+RPL_ENDOFINVITELIST MUST be sent.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>347</span></pre></dd>
+      
+        <dt id="RPL_EXCEPTLIST-constant" class="">RPL_EXCEPTLIST =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; &lt;exceptionmask&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>348</span></pre></dd>
+      
+        <dt id="RPL_ENDOFEXCEPTLIST-constant" class="">RPL_ENDOFEXCEPTLIST =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; :End of channel exception list”</p>
+<ul><li>
+<p>When listing the &#39;exception masks&#39; for a given channel, a server is
+required to send the list back using the RPL_EXCEPTLIST and
+RPL_ENDOFEXCEPTLIST messages.  A separate RPL_EXCEPTLIST is sent for each
+active mask. After the masks have been listed (or if none present) a
+RPL_ENDOFEXCEPTLIST MUST be sent.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>349</span></pre></dd>
+      
+        <dt id="RPL_VERSION-constant" class="">RPL_VERSION =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;version&gt;.&lt;debuglevel&gt; &lt;server&gt; :&lt;comments&gt;”</p>
+<ul><li>
+<p>Reply by the server showing its version details.</p>
+</li></ul>
+
+<p>The &lt;version&gt; is the version of the software being used (including
+any patchlevel revisions) and the &lt;debuglevel&gt; is used to indicate if
+the server is running in “debug mode”.</p>
+
+<p>The “comments” field may contain any comments about the version or further
+version details.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>351</span></pre></dd>
+      
+        <dt id="RPL_WHOREPLY-constant" class="">RPL_WHOREPLY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; &lt;user&gt; &lt;host&gt; &lt;server&gt; &lt;nick&gt; (
+”H“ / ”G“ &gt; [”*“] [ ( ”@“ / ”+“ ) ] :&lt;hopcount&gt; &lt;real name&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>352</span></pre></dd>
+      
+        <dt id="RPL_ENDOFWHO-constant" class="">RPL_ENDOFWHO =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;name&gt; :End of WHO list”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>315</span></pre></dd>
+      
+        <dt id="RPL_NAMREPLY-constant" class="">RPL_NAMREPLY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“( ”=“ / ”*“ / ”@“ ) &lt;channel&gt; :[ ”@“ / ”+“ ] &lt;nick&gt; *( ” “ [
+”@“ / ”+“ ] &lt;nick&gt; )</p>
+<ul><li>
+<p>“@” is used for secret channels, “*” for private</p>
+</li></ul>
+
+<p>channels, and “=” for others (public channels).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>353</span></pre></dd>
+      
+        <dt id="RPL_ENDOFNAMES-constant" class="">RPL_ENDOFNAMES =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; :End of NAMES list”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>366</span></pre></dd>
+      
+        <dt id="RPL_LINKS-constant" class="">RPL_LINKS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;mask&gt; &lt;server&gt; :&lt;hopcount&gt; &lt;server info&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>364</span></pre></dd>
+      
+        <dt id="RPL_ENDOFLINKS-constant" class="">RPL_ENDOFLINKS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;mask&gt; :End of LINKS list”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>365</span></pre></dd>
+      
+        <dt id="RPL_BANLIST-constant" class="">RPL_BANLIST =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; &lt;banmask&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>367</span></pre></dd>
+      
+        <dt id="RPL_ENDOFBANLIST-constant" class="">RPL_ENDOFBANLIST =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; :End of channel ban list”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>368</span></pre></dd>
+      
+        <dt id="RPL_INFO-constant" class="">RPL_INFO =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:&lt;string&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>371</span></pre></dd>
+      
+        <dt id="RPL_ENDOFINFO-constant" class="">RPL_ENDOFINFO =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:End of INFO list”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>374</span></pre></dd>
+      
+        <dt id="RPL_MOTDSTART-constant" class="">RPL_MOTDSTART =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:- &lt;server&gt; Message of the day - ”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>375</span></pre></dd>
+      
+        <dt id="RPL_MOTD-constant" class="">RPL_MOTD =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:- &lt;text&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>372</span></pre></dd>
+      
+        <dt id="RPL_ENDOFMOTD-constant" class="">RPL_ENDOFMOTD =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:End of MOTD command”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>376</span></pre></dd>
+      
+        <dt id="RPL_YOUREOPER-constant" class="">RPL_YOUREOPER =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:You are now an IRC operator”</p>
+<ul><li>
+<p>RPL_YOUREOPER is sent back to a client which has just successfully issued
+an OPER message and gained operator status.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>381</span></pre></dd>
+      
+        <dt id="RPL_REHASHING-constant" class="">RPL_REHASHING =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;config file&gt; :Rehashing”</p>
+<ul><li>
+<p>If the REHASH option is used and an operator sends a REHASH message, an
+RPL_REHASHING is sent back to the operator.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>382</span></pre></dd>
+      
+        <dt id="RPL_YOURESERVICE-constant" class="">RPL_YOURESERVICE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“You are service &lt;servicename&gt;”</p>
+<ul><li>
+<p>Sent by the server to a service upon successful registration.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>383</span></pre></dd>
+      
+        <dt id="RPL_TIME-constant" class="">RPL_TIME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;server&gt; :&lt;string showing server&#39;s local time&gt;”</p>
+<ul><li>
+<p>When replying to the TIME message, a server MUST send the reply using the
+RPL_TIME format above.  The string showing the time need only contain the
+correct day and time there.  There is no further requirement for the time
+string.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>391</span></pre></dd>
+      
+        <dt id="RPL_USERSSTART-constant" class="">RPL_USERSSTART =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:UserID   Terminal  Host”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>392</span></pre></dd>
+      
+        <dt id="RPL_USERS-constant" class="">RPL_USERS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:&lt;username&gt; &lt;ttyline&gt; &lt;hostname&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>393</span></pre></dd>
+      
+        <dt id="RPL_ENDOFUSERS-constant" class="">RPL_ENDOFUSERS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:End of users”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>394</span></pre></dd>
+      
+        <dt id="RPL_NOUSERS-constant" class="">RPL_NOUSERS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:Nobody logged in”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>395</span></pre></dd>
+      
+        <dt id="RPL_TRACELINK-constant" class="">RPL_TRACELINK =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“Link &lt;version &amp; debug level&gt; &lt;destination&gt; &lt;next
+server&gt; V&lt;protocol version&gt; &lt;link uptime in seconds&gt;
+&lt;backstream sendq&gt; &lt;upstream sendq&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>200</span></pre></dd>
+      
+        <dt id="RPL_TRACECONNECTING-constant" class="">RPL_TRACECONNECTING =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“Try. &lt;class&gt; &lt;server&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>201</span></pre></dd>
+      
+        <dt id="RPL_TRACEHANDSHAKE-constant" class="">RPL_TRACEHANDSHAKE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“H.S. &lt;class&gt; &lt;server&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>202</span></pre></dd>
+      
+        <dt id="RPL_TRACEUNKNOWN-constant" class="">RPL_TRACEUNKNOWN =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“???? &lt;class&gt; [&lt;client IP address in dot form&gt;]”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>203</span></pre></dd>
+      
+        <dt id="RPL_TRACEOPERATOR-constant" class="">RPL_TRACEOPERATOR =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“Oper &lt;class&gt; &lt;nick&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>204</span></pre></dd>
+      
+        <dt id="RPL_TRACEUSER-constant" class="">RPL_TRACEUSER =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“User &lt;class&gt; &lt;nick&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>205</span></pre></dd>
+      
+        <dt id="RPL_TRACESERVER-constant" class="">RPL_TRACESERVER =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“Serv &lt;class&gt; &lt;int&gt;S &lt;int&gt;C &lt;server&gt;
+&lt;nick!user|*!*&gt;@&lt;host|server&gt; V&lt;protocol version&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>206</span></pre></dd>
+      
+        <dt id="RPL_TRACESERVICE-constant" class="">RPL_TRACESERVICE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“Service &lt;class&gt; &lt;name&gt; &lt;type&gt; &lt;active type&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>207</span></pre></dd>
+      
+        <dt id="RPL_TRACENEWTYPE-constant" class="">RPL_TRACENEWTYPE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;newtype&gt; 0 &lt;client name&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>208</span></pre></dd>
+      
+        <dt id="RPL_TRACECLASS-constant" class="">RPL_TRACECLASS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“Class &lt;class&gt; &lt;count&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>209</span></pre></dd>
+      
+        <dt id="RPL_TRACERECONNECT-constant" class="">RPL_TRACERECONNECT =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Unused.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>210</span></pre></dd>
+      
+        <dt id="RPL_TRACELOG-constant" class="">RPL_TRACELOG =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“File &lt;logfile&gt; &lt;debug level&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>261</span></pre></dd>
+      
+        <dt id="RPL_TRACEEND-constant" class="">RPL_TRACEEND =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;server name&gt; &lt;version &amp; debug level&gt; :End of TRACE”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>262</span></pre></dd>
+      
+        <dt id="RPL_LOCALUSERS-constant" class="">RPL_LOCALUSERS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:Current local  users: 3  Max: 4”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>265</span></pre></dd>
+      
+        <dt id="RPL_GLOBALUSERS-constant" class="">RPL_GLOBALUSERS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:Current global users: 3  Max: 4”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>266</span></pre></dd>
+      
+        <dt id="RPL_STATSCONN-constant" class="">RPL_STATSCONN =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“::Highest connection count: 4 (4 clients) (251 since server was
+(re)started)”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>250</span></pre></dd>
+      
+        <dt id="RPL_STATSLINKINFO-constant" class="">RPL_STATSLINKINFO =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;linkname&gt; &lt;sendq&gt; &lt;sent messages&gt; &lt;sent Kbytes&gt;
+&lt;received messages&gt; &lt;received Kbytes&gt; &lt;time open&gt;”</p>
+<ul><li>
+<p>reports statistics on a connection.  &lt;linkname&gt; identifies the
+particular connection, &lt;sendq&gt; is the amount of data that is queued
+and waiting to be sent &lt;sent messages&gt; the number of messages sent,
+and &lt;sent Kbytes&gt; the amount of data sent, in Kbytes. &lt;received
+messages&gt; and &lt;received Kbytes&gt; are the equivalent of &lt;sent
+messages&gt; and &lt;sent Kbytes&gt; for received data, respectively. 
+&lt;time open&gt; indicates how long ago the connection was opened, in
+seconds.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>211</span></pre></dd>
+      
+        <dt id="RPL_STATSCOMMANDS-constant" class="">RPL_STATSCOMMANDS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;command&gt; &lt;count&gt; &lt;byte count&gt; &lt;remote count&gt;”</p>
+<ul><li>
+<p>reports statistics on commands usage.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>212</span></pre></dd>
+      
+        <dt id="RPL_ENDOFSTATS-constant" class="">RPL_ENDOFSTATS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;stats letter&gt; :End of STATS report”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>219</span></pre></dd>
+      
+        <dt id="RPL_STATSUPTIME-constant" class="">RPL_STATSUPTIME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:Server Up %d days %d:%02d:%02d”</p>
+<ul><li>
+<p>reports the server uptime.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>242</span></pre></dd>
+      
+        <dt id="RPL_STATSOLINE-constant" class="">RPL_STATSOLINE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“O &lt;hostmask&gt; * &lt;name&gt;”</p>
+<ul><li>
+<p>reports the allowed hosts from where user may become IRC operators.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>243</span></pre></dd>
+      
+        <dt id="RPL_UMODEIS-constant" class="">RPL_UMODEIS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;user mode string&gt;”</p>
+<ul><li>
+<p>To answer a query about a client&#39;s own mode, RPL_UMODEIS is sent back.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>221</span></pre></dd>
+      
+        <dt id="RPL_SERVLIST-constant" class="">RPL_SERVLIST =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;name&gt; &lt;server&gt; &lt;mask&gt; &lt;type&gt; &lt;hopcount&gt;
+&lt;info&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>234</span></pre></dd>
+      
+        <dt id="RPL_SERVLISTEND-constant" class="">RPL_SERVLISTEND =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;mask&gt; &lt;type&gt; :End of service listing”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>235</span></pre></dd>
+      
+        <dt id="RPL_LUSERCLIENT-constant" class="">RPL_LUSERCLIENT =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:There are &lt;integer&gt; users and &lt;integer&gt; services on
+&lt;integer&gt; servers”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>251</span></pre></dd>
+      
+        <dt id="RPL_LUSEROP-constant" class="">RPL_LUSEROP =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;integer&gt; :operator(s) online”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>252</span></pre></dd>
+      
+        <dt id="RPL_LUSERUNKNOWN-constant" class="">RPL_LUSERUNKNOWN =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;integer&gt; :unknown connection(s)”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>253</span></pre></dd>
+      
+        <dt id="RPL_LUSERCHANNELS-constant" class="">RPL_LUSERCHANNELS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;integer&gt; :channels formed”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>254</span></pre></dd>
+      
+        <dt id="RPL_LUSERME-constant" class="">RPL_LUSERME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:I have &lt;integer&gt; clients and &lt;integer&gt; servers”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>255</span></pre></dd>
+      
+        <dt id="RPL_ADMINME-constant" class="">RPL_ADMINME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;server&gt; :Administrative info”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>256</span></pre></dd>
+      
+        <dt id="RPL_ADMINLOC1-constant" class="">RPL_ADMINLOC1 =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:&lt;admin info&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>257</span></pre></dd>
+      
+        <dt id="RPL_ADMINLOC2-constant" class="">RPL_ADMINLOC2 =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:&lt;admin info&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>258</span></pre></dd>
+      
+        <dt id="RPL_ADMINEMAIL-constant" class="">RPL_ADMINEMAIL =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:&lt;admin info&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>259</span></pre></dd>
+      
+        <dt id="RPL_TRYAGAIN-constant" class="">RPL_TRYAGAIN =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;command&gt; :Please wait a while and try again.”</p>
+<ul><li>
+<p>When a server drops a command without processing it, it MUST use the reply
+RPL_TRYAGAIN to inform the originating client.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>263</span></pre></dd>
+      
+        <dt id="ERR_NOSUCHNICK-constant" class="">ERR_NOSUCHNICK =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;nickname&gt; :No such nick/channel”</p>
+<ul><li>
+<p>Used to indicate the nickname parameter supplied to a command is currently
+unused.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>401</span></pre></dd>
+      
+        <dt id="ERR_NOSUCHSERVER-constant" class="">ERR_NOSUCHSERVER =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;server name&gt; :No such server”</p>
+<ul><li>
+<p>Used to indicate the server name given currently does not exist.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>402</span></pre></dd>
+      
+        <dt id="ERR_NOSUCHCHANNEL-constant" class="">ERR_NOSUCHCHANNEL =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel name&gt; :No such channel”</p>
+<ul><li>
+<p>Used to indicate the given channel name is invalid.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>403</span></pre></dd>
+      
+        <dt id="ERR_CANNOTSENDTOCHAN-constant" class="">ERR_CANNOTSENDTOCHAN =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel name&gt; :Cannot send to channel”</p>
+<ul><li>
+<p>Sent to a user who is either (a) not on a channel which is mode +n or (b)
+not a chanop (or mode <tt>v) on a channel which has mode </tt>m set or where the
+user is banned and is trying to send a PRIVMSG message to that channel.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>404</span></pre></dd>
+      
+        <dt id="ERR_TOOMANYCHANNELS-constant" class="">ERR_TOOMANYCHANNELS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel name&gt; :You have joined too many channels”</p>
+<ul><li>
+<p>Sent to a user when they have joined the maximum number of allowed channels
+and they try to join another channel.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>405</span></pre></dd>
+      
+        <dt id="ERR_WASNOSUCHNICK-constant" class="">ERR_WASNOSUCHNICK =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;nickname&gt; :There was no such nickname”</p>
+<ul><li>
+<p>Returned by WHOWAS to indicate there is no history information for that
+nickname.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>406</span></pre></dd>
+      
+        <dt id="ERR_TOOMANYTARGETS-constant" class="">ERR_TOOMANYTARGETS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;target&gt; :&lt;error code&gt; recipients. &lt;abort message&gt;”</p>
+<ul><li>
+<p>Returned to a client which is attempting to send a PRIVMSG/NOTICE using the
+user@host destination format and for a user@host which has several
+occurrences.</p>
+</li><li>
+<p>Returned to a client which trying to send a PRIVMSG/NOTICE to too many
+recipients.</p>
+</li><li>
+<p>Returned to a client which is attempting to JOIN a safe channel using the
+shortname when there are more than one such channel.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>407</span></pre></dd>
+      
+        <dt id="ERR_NOSUCHSERVICE-constant" class="">ERR_NOSUCHSERVICE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;service name&gt; :No such service”</p>
+<ul><li>
+<p>Returned to a client which is attempting to send a SQUERY to a service
+which does not exist.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>408</span></pre></dd>
+      
+        <dt id="ERR_NOORIGIN-constant" class="">ERR_NOORIGIN =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:No origin specified”</p>
+<ul><li>
+<p>PING or PONG message missing the originator parameter.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>409</span></pre></dd>
+      
+        <dt id="ERR_NORECIPIENT-constant" class="">ERR_NORECIPIENT =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:No recipient given (&lt;command&gt;)”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>411</span></pre></dd>
+      
+        <dt id="ERR_NOTEXTTOSEND-constant" class="">ERR_NOTEXTTOSEND =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:No text to send”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>412</span></pre></dd>
+      
+        <dt id="ERR_NOTOPLEVEL-constant" class="">ERR_NOTOPLEVEL =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;mask&gt; :No toplevel domain specified”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>413</span></pre></dd>
+      
+        <dt id="ERR_WILDTOPLEVEL-constant" class="">ERR_WILDTOPLEVEL =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;mask&gt; :Wildcard in toplevel domain”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>414</span></pre></dd>
+      
+        <dt id="ERR_BADMASK-constant" class="">ERR_BADMASK =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;mask&gt; :Bad Server/host mask”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>415</span></pre></dd>
+      
+        <dt id="ERR_UNKNOWNCOMMAND-constant" class="">ERR_UNKNOWNCOMMAND =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;command&gt; :Unknown command”</p>
+<ul><li>
+<p>Returned to a registered client to indicate that the command sent is
+unknown by the server.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>421</span></pre></dd>
+      
+        <dt id="ERR_NOMOTD-constant" class="">ERR_NOMOTD =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:MOTD File is missing”</p>
+<ul><li>
+<p>Server&#39;s MOTD file could not be opened by the server.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>422</span></pre></dd>
+      
+        <dt id="ERR_NOADMININFO-constant" class="">ERR_NOADMININFO =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;server&gt; :No administrative info available”</p>
+<ul><li>
+<p>Returned by a server in response to an ADMIN message when there is an error
+in finding the appropriate information.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>423</span></pre></dd>
+      
+        <dt id="ERR_FILEERROR-constant" class="">ERR_FILEERROR =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:File error doing &lt;file op&gt; on &lt;file&gt;”</p>
+<ul><li>
+<p>Generic error message used to report a failed file operation during the
+processing of a message.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>424</span></pre></dd>
+      
+        <dt id="ERR_NONICKNAMEGIVEN-constant" class="">ERR_NONICKNAMEGIVEN =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:No nickname given”</p>
+<ul><li>
+<p>Returned when a nickname parameter expected for a command and isn&#39;t
+found.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>431</span></pre></dd>
+      
+        <dt id="ERR_ERRONEUSNICKNAME-constant" class="">ERR_ERRONEUSNICKNAME =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;nick&gt; :Erroneous nickname”</p>
+<ul><li>
+<p>Returned after receiving a NICK message which contains characters which do
+not fall in the defined set.  See section 2.3.1 for details on valid
+nicknames.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>432</span></pre></dd>
+      
+        <dt id="ERR_NICKNAMEINUSE-constant" class="">ERR_NICKNAMEINUSE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;nick&gt; :Nickname is already in use”</p>
+<ul><li>
+<p>Returned when a NICK message is processed that results in an attempt to
+change to a currently existing nickname.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>433</span></pre></dd>
+      
+        <dt id="ERR_NICKCOLLISION-constant" class="">ERR_NICKCOLLISION =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;nick&gt; :Nickname collision KILL from &lt;user&gt;@&lt;host&gt;”</p>
+<ul><li>
+<p>Returned by a server to a client when it detects a nickname collision
+(registered of a NICK that already exists by another server).</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>436</span></pre></dd>
+      
+        <dt id="ERR_UNAVAILRESOURCE-constant" class="">ERR_UNAVAILRESOURCE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;nick/channel&gt; :Nick/channel is temporarily unavailable”</p>
+<ul><li>
+<p>Returned by a server to a user trying to join a channel currently blocked
+by the channel delay mechanism.</p>
+</li><li>
+<p>Returned by a server to a user trying to change nickname when the desired
+nickname is blocked by the nick delay mechanism.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>437</span></pre></dd>
+      
+        <dt id="ERR_USERNOTINCHANNEL-constant" class="">ERR_USERNOTINCHANNEL =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;nick&gt; &lt;channel&gt; :They aren&#39;t on that channel”</p>
+<ul><li>
+<p>Returned by the server to indicate that the target user of the command is
+not on the given channel.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>441</span></pre></dd>
+      
+        <dt id="ERR_NOTONCHANNEL-constant" class="">ERR_NOTONCHANNEL =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; :You&#39;re not on that channel”</p>
+<ul><li>
+<p>Returned by the server whenever a client tries to perform a channel
+affecting command for which the client isn&#39;t a member.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>442</span></pre></dd>
+      
+        <dt id="ERR_USERONCHANNEL-constant" class="">ERR_USERONCHANNEL =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;user&gt; &lt;channel&gt; :is already on channel”</p>
+<ul><li>
+<p>Returned when a client tries to invite a user to a channel they are already
+on.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>443</span></pre></dd>
+      
+        <dt id="ERR_NOLOGIN-constant" class="">ERR_NOLOGIN =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;user&gt; :User not logged in”</p>
+<ul><li>
+<p>Returned by the summon after a SUMMON command for a user was unable to be
+performed since they were not logged in.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>444</span></pre></dd>
+      
+        <dt id="ERR_SUMMONDISABLED-constant" class="">ERR_SUMMONDISABLED =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:SUMMON has been disabled”</p>
+<ul><li>
+<p>Returned as a response to the SUMMON command.  MUST be returned by any
+server which doesn&#39;t implement it.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>445</span></pre></dd>
+      
+        <dt id="ERR_USERSDISABLED-constant" class="">ERR_USERSDISABLED =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:USERS has been disabled”</p>
+<ul><li>
+<p>Returned as a response to the USERS command.  MUST be returned by any
+server which does not implement it.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>446</span></pre></dd>
+      
+        <dt id="ERR_NOTREGISTERED-constant" class="">ERR_NOTREGISTERED =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:You have not registered”</p>
+<ul><li>
+<p>Returned by the server to indicate that the client MUST be registered
+before the server will allow it to be parsed in detail.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>451</span></pre></dd>
+      
+        <dt id="ERR_NEEDMOREPARAMS-constant" class="">ERR_NEEDMOREPARAMS =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;command&gt; :Not enough parameters”</p>
+<ul><li>
+<p>Returned by the server by numerous commands to indicate to the client that
+it didn&#39;t supply enough parameters.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>461</span></pre></dd>
+      
+        <dt id="ERR_ALREADYREGISTRED-constant" class="">ERR_ALREADYREGISTRED =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:Unauthorized command (already registered)”</p>
+<ul><li>
+<p>Returned by the server to any link which tries to change part of the
+registered details (such as password or user details from second USER
+message).</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>462</span></pre></dd>
+      
+        <dt id="ERR_NOPERMFORHOST-constant" class="">ERR_NOPERMFORHOST =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:Your host isn&#39;t among the privileged”</p>
+<ul><li>
+<p>Returned to a client which attempts to register with a server which does
+not been setup to allow connections from the host the attempted connection
+is tried.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>463</span></pre></dd>
+      
+        <dt id="ERR_PASSWDMISMATCH-constant" class="">ERR_PASSWDMISMATCH =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:Password incorrect”</p>
+<ul><li>
+<p>Returned to indicate a failed attempt at registering a connection for which
+a password was required and was either not given or incorrect.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>464</span></pre></dd>
+      
+        <dt id="ERR_YOUREBANNEDCREEP-constant" class="">ERR_YOUREBANNEDCREEP =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:You are banned from this server”</p>
+<ul><li>
+<p>Returned after an attempt to connect and register yourself with a server
+which has been setup to explicitly deny connections to you.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>465</span></pre></dd>
+      
+        <dt id="ERR_YOUWILLBEBANNED-constant" class="">ERR_YOUWILLBEBANNED =
+          <div class="docstring">
+  <div class="discussion">
+    <ul><li>
+<p>Sent by a server to a user to inform that access to the server will soon be
+denied.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>466</span></pre></dd>
+      
+        <dt id="ERR_KEYSET-constant" class="">ERR_KEYSET =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; :Channel key already set”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>467</span></pre></dd>
+      
+        <dt id="ERR_CHANNELISFULL-constant" class="">ERR_CHANNELISFULL =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; :Cannot join channel (+l)”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>471</span></pre></dd>
+      
+        <dt id="ERR_UNKNOWNMODE-constant" class="">ERR_UNKNOWNMODE =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;char&gt; :is unknown mode char to me for &lt;channel&gt;”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>472</span></pre></dd>
+      
+        <dt id="ERR_INVITEONLYCHAN-constant" class="">ERR_INVITEONLYCHAN =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; :Cannot join channel (+i)”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>473</span></pre></dd>
+      
+        <dt id="ERR_BANNEDFROMCHAN-constant" class="">ERR_BANNEDFROMCHAN =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; :Cannot join channel (+b)”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>474</span></pre></dd>
+      
+        <dt id="ERR_BADCHANNELKEY-constant" class="">ERR_BADCHANNELKEY =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; :Cannot join channel (+k)”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>475</span></pre></dd>
+      
+        <dt id="ERR_BADCHANMASK-constant" class="">ERR_BADCHANMASK =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; :Bad Channel Mask”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>476</span></pre></dd>
+      
+        <dt id="ERR_NOCHANMODES-constant" class="">ERR_NOCHANMODES =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; :Channel doesn&#39;t support modes”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>477</span></pre></dd>
+      
+        <dt id="ERR_BANLISTFULL-constant" class="">ERR_BANLISTFULL =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; &lt;char&gt; :Channel list is full”</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>478</span></pre></dd>
+      
+        <dt id="ERR_NOPRIVILEGES-constant" class="">ERR_NOPRIVILEGES =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:Permission Denied- You&#39;re not an IRC operator”</p>
+<ul><li>
+<p>Any command requiring operator privileges to operate MUST return this error
+to indicate the attempt was unsuccessful.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>481</span></pre></dd>
+      
+        <dt id="ERR_CHANOPRIVSNEEDED-constant" class="">ERR_CHANOPRIVSNEEDED =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“&lt;channel&gt; :You&#39;re not channel operator”</p>
+<ul><li>
+<p>Any command requiring &#39;chanop&#39; privileges (such as MODE messages)
+MUST return this error if the client making the attempt is not a chanop on
+the specified channel.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>482</span></pre></dd>
+      
+        <dt id="ERR_CANTKILLSERVER-constant" class="">ERR_CANTKILLSERVER =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:You can&#39;t kill a server!”</p>
+<ul><li>
+<p>Any attempts to use the KILL command on a server are to be refused and this
+error returned directly to the client.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>483</span></pre></dd>
+      
+        <dt id="ERR_RESTRICTED-constant" class="">ERR_RESTRICTED =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:Your connection is restricted!”</p>
+<ul><li>
+<p>Sent by the server to a user upon connection to indicate the restricted
+nature of the connection (user mode “+r”).</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>484</span></pre></dd>
+      
+        <dt id="ERR_UNIQOPPRIVSNEEDED-constant" class="">ERR_UNIQOPPRIVSNEEDED =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:You&#39;re not the original channel operator”</p>
+<ul><li>
+<p>Any MODE requiring “channel creator” privileges MUST return this error if
+the client making the attempt is not a chanop on the specified channel.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>485</span></pre></dd>
+      
+        <dt id="ERR_NOOPERHOST-constant" class="">ERR_NOOPERHOST =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:No O-lines for your host”</p>
+<ul><li>
+<p>If a client sends an OPER message and the server has not been configured to
+allow connections from the client&#39;s host as an operator, this error
+MUST be returned.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>491</span></pre></dd>
+      
+        <dt id="ERR_UMODEUNKNOWNFLAG-constant" class="">ERR_UMODEUNKNOWNFLAG =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:Unknown MODE flag”</p>
+<ul><li>
+<p>Returned by the server to indicate that a MODE message was sent with a
+nickname parameter and that the a mode flag sent was not recognized.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>501</span></pre></dd>
+      
+        <dt id="ERR_USERSDONTMATCH-constant" class="">ERR_USERSDONTMATCH =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>“:Cannot change mode for other users”</p>
+<ul><li>
+<p>Error sent to any user trying to view or change the user mode for a user
+other than themselves.</p>
+</li></ul>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>502</span></pre></dd>
+      
+        <dt id="RPL_SERVICEINFO-constant" class="">RPL_SERVICEINFO =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>5.3 Reserved numerics</p>
+
+<p>These numerics are not described above since they fall into one of the
+following categories:</p>
+<ol><li>
+<p>no longer in use;</p>
+</li><li>
+<p>reserved for future planned use;</p>
+</li><li>
+<p>in current use but are part of a non-generic &#39;feature&#39; of the
+current IRC server.</p>
+</li></ol>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='int'>231</span></pre></dd>
+      
+        <dt id="RPL_ENDOFSERVICES-constant" class="">RPL_ENDOFSERVICES =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>232</span></pre></dd>
+      
+        <dt id="RPL_SERVICE-constant" class="">RPL_SERVICE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>233</span></pre></dd>
+      
+        <dt id="RPL_NONE-constant" class="">RPL_NONE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>300</span></pre></dd>
+      
+        <dt id="RPL_WHOISCHANOP-constant" class="">RPL_WHOISCHANOP =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>316</span></pre></dd>
+      
+        <dt id="RPL_KILLDONE-constant" class="">RPL_KILLDONE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>361</span></pre></dd>
+      
+        <dt id="RPL_CLOSING-constant" class="">RPL_CLOSING =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>362</span></pre></dd>
+      
+        <dt id="RPL_CLOSEEND-constant" class="">RPL_CLOSEEND =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>363</span></pre></dd>
+      
+        <dt id="RPL_INFOSTART-constant" class="">RPL_INFOSTART =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>373</span></pre></dd>
+      
+        <dt id="RPL_MYPORTIS-constant" class="">RPL_MYPORTIS =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>384</span></pre></dd>
+      
+        <dt id="RPL_STATSCLINE-constant" class="">RPL_STATSCLINE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>213</span></pre></dd>
+      
+        <dt id="RPL_STATSNLINE-constant" class="">RPL_STATSNLINE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>214</span></pre></dd>
+      
+        <dt id="RPL_STATSILINE-constant" class="">RPL_STATSILINE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>215</span></pre></dd>
+      
+        <dt id="RPL_STATSKLINE-constant" class="">RPL_STATSKLINE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>216</span></pre></dd>
+      
+        <dt id="RPL_STATSQLINE-constant" class="">RPL_STATSQLINE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>217</span></pre></dd>
+      
+        <dt id="RPL_STATSYLINE-constant" class="">RPL_STATSYLINE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>218</span></pre></dd>
+      
+        <dt id="RPL_STATSVLINE-constant" class="">RPL_STATSVLINE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>240</span></pre></dd>
+      
+        <dt id="RPL_STATSLLINE-constant" class="">RPL_STATSLLINE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>241</span></pre></dd>
+      
+        <dt id="RPL_STATSHLINE-constant" class="">RPL_STATSHLINE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>244</span></pre></dd>
+      
+        <dt id="RPL_STATSSLINE-constant" class="">RPL_STATSSLINE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>244</span></pre></dd>
+      
+        <dt id="RPL_STATSPING-constant" class="">RPL_STATSPING =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>246</span></pre></dd>
+      
+        <dt id="RPL_STATSBLINE-constant" class="">RPL_STATSBLINE =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>247</span></pre></dd>
+      
+        <dt id="ERR_NOSERVICEHOST-constant" class="">ERR_NOSERVICEHOST =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>492</span></pre></dd>
+      
+        <dt id="RPL_DATASTR-constant" class="">RPL_DATASTR =
+          
+        </dt>
+        <dd><pre class="code"><span class='int'>290</span></pre></dd>
+      
+        <dt id="Bold-constant" class="">Bold =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Define standard IRC attributes (not so standard actually, but the closest
+thing we have …)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\002</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="Underline-constant" class="">Underline =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\037</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="Reverse-constant" class="">Reverse =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\026</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="Italic-constant" class="">Italic =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\011</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="NormalText-constant" class="">NormalText =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\017</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="AttributeRx-constant" class="">AttributeRx =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>Bold</span><span class='embexpr_end'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='const'>Underline</span><span class='embexpr_end'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='const'>Reverse</span><span class='embexpr_end'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='const'>Italic</span><span class='embexpr_end'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='const'>NormalText</span><span class='embexpr_end'>}</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="Color-constant" class="">Color =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Color is prefixed by 003 and followed by optional foreground and background
+specifications, two-digits-max numbers separated by a comma. One of the two
+parts must be present.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\003</span><span class='tstring_end'>&quot;</span></span></pre></dd>
+      
+        <dt id="ColorRx-constant" class="">ColorRx =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>Color</span><span class='embexpr_end'>}</span><span class='tstring_content'>\d?\d?(?:,\d\d?)?</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="FormattingRx-constant" class="">FormattingRx =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='regexp_beg'>/</span><span class='embexpr_beg'>#{</span><span class='const'>AttributeRx</span><span class='embexpr_end'>}</span><span class='tstring_content'>|</span><span class='embexpr_beg'>#{</span><span class='const'>ColorRx</span><span class='embexpr_end'>}</span><span class='regexp_end'>/</span></span></pre></dd>
+      
+        <dt id="ColorCode-constant" class="">ColorCode =
+          <div class="docstring">
+  <div class="discussion">
+    
+<p>Standard color codes</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+        </dt>
+        <dd><pre class="code"><span class='lbrace'>{</span>
+  <span class='symbol'>:black</span>      <span class='op'>=&gt;</span> <span class='int'>1</span><span class='comma'>,</span>
+  <span class='symbol'>:blue</span>       <span class='op'>=&gt;</span> <span class='int'>2</span><span class='comma'>,</span>
+  <span class='symbol'>:navyblue</span>   <span class='op'>=&gt;</span> <span class='int'>2</span><span class='comma'>,</span>
+  <span class='symbol'>:navy_blue</span>  <span class='op'>=&gt;</span> <span class='int'>2</span><span class='comma'>,</span>
+  <span class='symbol'>:green</span>      <span class='op'>=&gt;</span> <span class='int'>3</span><span class='comma'>,</span>
+  <span class='symbol'>:red</span>        <span class='op'>=&gt;</span> <span class='int'>4</span><span class='comma'>,</span>
+  <span class='symbol'>:brown</span>      <span class='op'>=&gt;</span> <span class='int'>5</span><span class='comma'>,</span>
+  <span class='symbol'>:purple</span>     <span class='op'>=&gt;</span> <span class='int'>6</span><span class='comma'>,</span>
+  <span class='symbol'>:olive</span>      <span class='op'>=&gt;</span> <span class='int'>7</span><span class='comma'>,</span>
+  <span class='symbol'>:yellow</span>     <span class='op'>=&gt;</span> <span class='int'>8</span><span class='comma'>,</span>
+  <span class='symbol'>:limegreen</span>  <span class='op'>=&gt;</span> <span class='int'>9</span><span class='comma'>,</span>
+  <span class='symbol'>:lime_green</span> <span class='op'>=&gt;</span> <span class='int'>9</span><span class='comma'>,</span>
+  <span class='symbol'>:teal</span>       <span class='op'>=&gt;</span> <span class='int'>10</span><span class='comma'>,</span>
+  <span class='symbol'>:aqualight</span>  <span class='op'>=&gt;</span> <span class='int'>11</span><span class='comma'>,</span>
+  <span class='symbol'>:aqua_light</span> <span class='op'>=&gt;</span> <span class='int'>11</span><span class='comma'>,</span>
+  <span class='symbol'>:royal_blue</span> <span class='op'>=&gt;</span> <span class='int'>12</span><span class='comma'>,</span>
+  <span class='symbol'>:hotpink</span>    <span class='op'>=&gt;</span> <span class='int'>13</span><span class='comma'>,</span>
+  <span class='symbol'>:hot_pink</span>   <span class='op'>=&gt;</span> <span class='int'>13</span><span class='comma'>,</span>
+  <span class='symbol'>:darkgray</span>   <span class='op'>=&gt;</span> <span class='int'>14</span><span class='comma'>,</span>
+  <span class='symbol'>:dark_gray</span>  <span class='op'>=&gt;</span> <span class='int'>14</span><span class='comma'>,</span>
+  <span class='symbol'>:lightgray</span>  <span class='op'>=&gt;</span> <span class='int'>15</span><span class='comma'>,</span>
+  <span class='symbol'>:light_gray</span> <span class='op'>=&gt;</span> <span class='int'>15</span><span class='comma'>,</span>
+  <span class='symbol'>:white</span>      <span class='op'>=&gt;</span> <span class='int'>0</span>
+<span class='rbrace'>}</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#color-class_method" title="color (class method)">+ (Object) <strong>color</strong>(fg = nil, bg = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Insert the full color code for a given foreground/background combination.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#find_color-class_method" title="find_color (class method)">+ (Object) <strong>find_color</strong>(data) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Convert a String or Symbol into a color number.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="color-class_method">
+  
+    + (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>color</strong>(fg = nil, bg = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Insert the full color code for a given foreground/background combination.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/message.rb', line 98</span>
+
+<span class='kw'>def</span> <span class='const'>Irc</span><span class='period'>.</span><span class='id identifier rubyid_color'>color</span><span class='lparen'>(</span><span class='id identifier rubyid_fg'>fg</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span><span class='id identifier rubyid_bg'>bg</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_str'>str</span> <span class='op'>=</span> <span class='const'>Color</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_fg'>fg</span>
+   <span class='id identifier rubyid_str'>str</span> <span class='op'>&lt;&lt;</span> <span class='const'>Irc</span><span class='period'>.</span><span class='id identifier rubyid_find_color'>find_color</span><span class='lparen'>(</span><span class='id identifier rubyid_fg'>fg</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_bg'>bg</span>
+    <span class='id identifier rubyid_str'>str</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>,</span><span class='tstring_end'>&quot;</span></span> <span class='op'>&lt;&lt;</span> <span class='const'>Irc</span><span class='period'>.</span><span class='id identifier rubyid_find_color'>find_color</span><span class='lparen'>(</span><span class='id identifier rubyid_bg'>bg</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_str'>str</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_color-class_method">
+  
+    + (<tt><span class='object_link'><a href="Object.html" title="Object (class)">Object</a></span></tt>) <strong>find_color</strong>(data) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Convert a String or Symbol into a color number</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File '/home/apoc/projects/ruby/rbot/lib/rbot/message.rb', line 79</span>
+
+<span class='kw'>def</span> <span class='const'>Irc</span><span class='period'>.</span><span class='id identifier rubyid_find_color'>find_color</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%02d</span><span class='tstring_end'>&quot;</span></span> <span class='op'>%</span> <span class='kw'>if</span> <span class='const'>Integer</span> <span class='op'>===</span> <span class='id identifier rubyid_data'>data</span>
+    <span class='id identifier rubyid_data'>data</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_f'>f</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='const'>String</span> <span class='op'>===</span> <span class='id identifier rubyid_data'>data</span>
+          <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_intern'>intern</span>
+        <span class='kw'>else</span>
+          <span class='id identifier rubyid_data'>data</span>
+        <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='const'>ColorCode</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span><span class='lparen'>(</span><span class='id identifier rubyid_f'>f</span><span class='rparen'>)</span>
+      <span class='const'>ColorCode</span><span class='lbracket'>[</span><span class='id identifier rubyid_f'>f</span><span class='rbracket'>]</span>
+    <span class='kw'>else</span>
+      <span class='int'>0</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Mon Mar  9 04:49:01 2015 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.2.0).
+</div>
+
+  </body>
+</html>
